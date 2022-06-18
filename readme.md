@@ -1,0 +1,1 @@
+このサイトは [Github Pages](https://kozitex.github.io/web-e-hon_com/) にてご確認いただけます。

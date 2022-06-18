@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    perspective: 1px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+.wrapper.fixed {
+    position: fixed;
+}
+.sky {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1000vw;
+    height: 60%;
+    /* background-color: #603709; */
+    background: url(../img/sky.png);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    /* background-size: 1000vw 450px; */
+    /* background-position: 0 100px; */
+    opacity: 0.7;
+}
+.ground {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1000vw;
+    height: 40%;
+    /* background-color: #603709; */
+    background: url(../img/ground.png);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    /* background-size: 1000vw 300px; */
+}
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1500vw;
+    height: 100vh;
+    padding: 0 100px;
+    /* overflow-y: hidden; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* border-top: 1px solid #ccc; */
+    /* border-bottom: 1px solid #ccc; */
+}
+.layer_back{
+    transform: translateZ(-3px);
+}
+.layer_middle{
+    transform: translateZ(-1px);
+}
+.layer_front{
+    transform: translateZ(0);
+}
+.bar{
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 70%; */
+    position: relative;
+    width: 150px;
+    height: 100%;
+    margin-right: 900px;
+    /* transform: translate(-50%, -50%); */
+    /* border: 2px solid #333333; */
+    /* background-color: #fff; */
+}
+.layer_back .bar{
+    background-color: #666;
+}
+.layer_middle .bar{
+    background-color: #999;
+}
+.layer_front .bar{
+    background-color: #ccc;
+}
+.bar::before {
+    content: '';
+    position: absolute;
+    top: -1350px;
+    left: -500px;
+    /* right: 0; */
+    width: 1100px;
+    height: 1500px;
+    /* margin: 0 auto; */
+    background-color: #006400;
+    border-radius: 40% 40% 50% 50% / 50% 50% 30% 30%;
+}
+
+.layer_back .bar::before{
+    background-color: #006400;
+}
+.layer_middle .bar::before{
+    background-color: #018f01;
+}
+.layer_front .bar::before{
+    background-color: #05ae05;
+}
